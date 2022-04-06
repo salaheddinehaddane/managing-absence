@@ -1,0 +1,9 @@
+package model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Service {
+	private int id;
+	private String nom_service;
+}

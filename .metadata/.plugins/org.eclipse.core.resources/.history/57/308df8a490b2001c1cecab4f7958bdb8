@@ -1,0 +1,13 @@
+package model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+@Getter
+
+public class Personne {
+	@Id
+	private String mat;
+	private String nom;
+}

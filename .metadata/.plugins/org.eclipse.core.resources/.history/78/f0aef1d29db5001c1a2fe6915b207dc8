@@ -1,0 +1,10 @@
+package com.example.demo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.model.Etudiant;
+
+public interface EtudiantRepository  extends JpaRepository<Etudiant,String> {
+	@Query("SELECT e FROM Etudiant e")
+	List<Etudiant> getAllEtudiant();
+}

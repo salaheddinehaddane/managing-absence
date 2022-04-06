@@ -1,0 +1,18 @@
+package model;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Tache {
+	@Id
+	@GeneratedValue
+	private int id;
+	private String nom_tache;
+	
+	@ManyToOne
+	private Absence absence;
+}

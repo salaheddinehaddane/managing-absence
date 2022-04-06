@@ -1,0 +1,58 @@
+package com.example.demo.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.ManyToOne;
+
+@Entity
+
+public class Absence implements Serializable{
+	
+	private int heure_debut;
+	private int heure_fin;
+	@Column(length=255)
+	private String motif;
+	
+
+	@EmbeddedId
+	@ManyToOne
+	Personne personne;
+
+	@EmbeddedId
+	@ManyToOne
+	Tache tache;
+	
+	
+	
+	
+
+	public int getHeure_debut() {
+		return heure_debut;
+	}
+	public void setHeure_debut(int heure_debut) {
+		this.heure_debut = heure_debut;
+	}
+	public int getHeure_fin() {
+		return heure_fin;
+	}
+	public void setHeure_fin(int heure_fin) {
+		this.heure_fin = heure_fin;
+	}
+	public String getMotif() {
+		return motif;
+	}
+	public void setMotif(String motif) {
+		this.motif = motif;
+	}
+	public Absence() {
+		super();
+	}
+	
+	
+}

@@ -1,0 +1,54 @@
+package com.example.demo.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+
+@Entity
+public class Absence {
+	@OneToMany(mappedBy="personne")
+	List<Personne> personne = new ArrayList<Personne>();
+	@OneToMany(mappedBy="personne")
+	List<Tache> tache = new ArrayList<Tache>();
+	private int heure_debut;
+	private int heure_fin;
+	private String motif;
+	public List<Personne> getPersonne() {
+		return personne;
+	}
+	public void setPersonne(List<Personne> personne) {
+		this.personne = personne;
+	}
+	public List<Tache> getTache() {
+		return tache;
+	}
+	public void setTache(List<Tache> tache) {
+		this.tache = tache;
+	}
+	public int getHeure_debut() {
+		return heure_debut;
+	}
+	public void setHeure_debut(int heure_debut) {
+		this.heure_debut = heure_debut;
+	}
+	public int getHeure_fin() {
+		return heure_fin;
+	}
+	public void setHeure_fin(int heure_fin) {
+		this.heure_fin = heure_fin;
+	}
+	public String getMotif() {
+		return motif;
+	}
+	public void setMotif(String motif) {
+		this.motif = motif;
+	}
+	public Absence() {
+		super();
+	}
+	
+	
+}

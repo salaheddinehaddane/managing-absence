@@ -1,0 +1,9 @@
+package repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import model.Tache;
+
+public interface TacheRepository  extends JpaRepository<Tache,Integer> {
+
+}

@@ -1,0 +1,16 @@
+package com.example.demo.model;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+
+@Entity
+@DiscriminatorValue("admin")
+public class Admin extends Personne {
+	private String userName;
+	private String password;
+	public Admin() {
+		super();
+	}
+	
+}

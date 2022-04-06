@@ -1,0 +1,12 @@
+package model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Absence {
+	@OneToMany(mappedBy="personne")
+	List<Personne> personne = new ArrayList();
+	private int heure_debut;
+	private int heure_fin;
+	private String motif;
+}

@@ -1,0 +1,9 @@
+package repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import model.Absence;
+
+public interface AbsenceRepository  extends JpaRepository<Absence,String> {
+
+}
